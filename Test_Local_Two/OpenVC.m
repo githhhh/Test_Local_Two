@@ -27,6 +27,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _label.text =  [[YCLanguageTools shareInstance] locatizedStringForkey:@"content"];
+    
+    
+    
+    
 }
 - (IBAction)switchAction:(id)sender {
     if ( [[[YCLanguageTools shareInstance] defineUserLanguage] isEqualToString:@"zh-Hans"] ) {
@@ -36,7 +42,7 @@
     }
     
     // reload the storyboard in the selected language
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[YCLanguageTools baseBundel]];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[[YCLanguageTools shareInstance] languageBundle]];
     // reload the view controllers
     UIViewController *test1 = [storyBoard instantiateViewControllerWithIdentifier:@"test1"];
     UIViewController *test2 = [storyBoard instantiateViewControllerWithIdentifier:@"test2"];

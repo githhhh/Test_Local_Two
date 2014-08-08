@@ -35,7 +35,7 @@
 }
 
 -(void)dealloc{
-    NSLog(@"super================dealloc");
+    NSLog(@"======%@==============dealloc",self);
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:kLanguageChangeNotifination
                                                   object:nil];

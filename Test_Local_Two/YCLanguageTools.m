@@ -57,7 +57,7 @@
     [def synchronize];
 #warning 这里发送通知不合理
     //发送change通知
-    [[NSNotificationCenter defaultCenter] postNotificationName:kLanguageChangeNotifination object:self];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:kLanguageChangeNotifination object:self];
 }
 -(NSString *)defineUserLanguage{
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];

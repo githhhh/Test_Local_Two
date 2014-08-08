@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - test3-->
+        <!--TestVC3 - test3-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="test3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="test3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="TestVC3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -23,10 +23,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBD-Jt-ucr">
+                                <rect key="frame" x="61" y="170" width="199" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.4923716299" blue="0.5238471066" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="test3" id="zql-zX-AGL"/>
+                    <connections>
+                        <outlet property="label" destination="eBD-Jt-ucr" id="TKc-yq-SEv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,19 +71,30 @@
                                     <action selector="switchAction:" destination="4ew-Te-g4i" eventType="touchUpInside" id="YPG-o9-mk6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tp-o6-DnG">
+                                <rect key="frame" x="61" y="202" width="199" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.4923716299" blue="0.5238471066" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="open" id="duu-Bn-5Pz"/>
+                    <connections>
+                        <outlet property="label" destination="1Tp-o6-DnG" id="ZXa-aC-hb5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsm-bT-ief" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1573" y="627"/>
         </scene>
-        <!--View Controller - test2-->
+        <!--TestVC2 - test2-->
         <scene sceneID="fVq-6B-Xnu">
             <objects>
-                <viewController storyboardIdentifier="test2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kn0-wV-p9s" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="test2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kn0-wV-p9s" customClass="TestVC2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RSo-IB-pjQ"/>
                         <viewControllerLayoutGuide type="bottom" id="1jA-ql-GLD"/>
@@ -87,10 +109,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytd-A0-qAq">
+                                <rect key="frame" x="61" y="166" width="199" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.4923716299" blue="0.5238471066" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="test2" id="h6u-j3-Uiw"/>
+                    <connections>
+                        <outlet property="label" destination="ytd-A0-qAq" id="C5Z-cT-4hP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5o-ob-ATz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,20 +140,20 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="4ew-Te-g4i" kind="relationship" relationship="viewControllers" id="WWF-RV-a53"/>
                         <segue destination="Wbh-KA-PqH" kind="relationship" relationship="viewControllers" id="nKa-TO-Um3"/>
                         <segue destination="kn0-wV-p9s" kind="relationship" relationship="viewControllers" id="QG1-7r-HFH"/>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="Jzs-yj-ova"/>
+                        <segue destination="4ew-Te-g4i" kind="relationship" relationship="viewControllers" id="WWF-RV-a53"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6v-z5-EA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="138"/>
         </scene>
-        <!--View Controller - test1-->
+        <!--TestVC1 - test1-->
         <scene sceneID="yuG-us-qpD">
             <objects>
-                <viewController storyboardIdentifier="test1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wbh-KA-PqH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="test1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wbh-KA-PqH" customClass="TestVC1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Pp-3N-LtX"/>
                         <viewControllerLayoutGuide type="bottom" id="GMw-Gx-TpU"/>
@@ -135,10 +168,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17o-ae-kUY">
+                                <rect key="frame" x="61" y="159" width="199" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.4923716299" blue="0.5238471066" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="test1" id="xLJ-UF-fUO"/>
+                    <connections>
+                        <outlet property="label" destination="17o-ae-kUY" id="Ksd-SM-1Cj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6l-fK-izP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

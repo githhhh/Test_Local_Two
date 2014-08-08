@@ -1,13 +1,14 @@
 //
-//  OpenVC.h
+//  TestVC2.h
 //  Test_Local_Two
 //
-//  Created by admin on 14-8-7.
+//  Created by admin on 14-8-8.
 //  Copyright (c) 2014年 com.yongche. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-@interface OpenVC : YCViewController
+#import "YCViewController.h"
+
+@interface TestVC2 : YCViewController
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end

@@ -23,7 +23,10 @@
 		C1869745199364B900E92774 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1869747199364B900E92774 /* Localizable.strings */; };
 		C186974A1993698100E92774 /* OpenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C18697491993698100E92774 /* OpenVC.m */; };
 		C186975519936C2A00E92774 /* YCLanguageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C186975219936C2A00E92774 /* YCLanguageTools.m */; };
-		C186975619936C2A00E92774 /* YCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C186975419936C2A00E92774 /* YCViewController.m */; };
+		C1F6AB3319949C9D008AADA4 /* TestVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3219949C9D008AADA4 /* TestVC1.m */; };
+		C1F6AB3619949CCA008AADA4 /* TestVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3519949CCA008AADA4 /* TestVC2.m */; };
+		C1F6AB3919949CE2008AADA4 /* TestVC3.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3819949CE2008AADA4 /* TestVC3.m */; };
+		C1F6AB3E1994A847008AADA4 /* YCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3D1994A847008AADA4 /* YCViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +64,17 @@
 		C186974E19936A7F00E92774 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C186975119936C2A00E92774 /* YCLanguageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCLanguageTools.h; sourceTree = "<group>"; };
 		C186975219936C2A00E92774 /* YCLanguageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCLanguageTools.m; sourceTree = "<group>"; };
-		C186975319936C2A00E92774 /* YCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCViewController.h; sourceTree = "<group>"; };
-		C186975419936C2A00E92774 /* YCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCViewController.m; sourceTree = "<group>"; };
 		C18697571993860000E92774 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C1F6AB2C19949490008AADA4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
-		C1F6AB2D19949490008AADA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1F6AB3119949C9D008AADA4 /* TestVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC1.h; sourceTree = "<group>"; };
+		C1F6AB3219949C9D008AADA4 /* TestVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC1.m; sourceTree = "<group>"; };
+		C1F6AB3419949CCA008AADA4 /* TestVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC2.h; sourceTree = "<group>"; };
+		C1F6AB3519949CCA008AADA4 /* TestVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC2.m; sourceTree = "<group>"; };
+		C1F6AB3719949CE2008AADA4 /* TestVC3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC3.h; sourceTree = "<group>"; };
+		C1F6AB3819949CE2008AADA4 /* TestVC3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC3.m; sourceTree = "<group>"; };
+		C1F6AB3A1994A7D6008AADA4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		C1F6AB3B1994A7D6008AADA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1F6AB3C1994A847008AADA4 /* YCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCViewController.h; sourceTree = "<group>"; };
+		C1F6AB3D1994A847008AADA4 /* YCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +137,8 @@
 			children = (
 				C186975119936C2A00E92774 /* YCLanguageTools.h */,
 				C186975219936C2A00E92774 /* YCLanguageTools.m */,
-				C186975319936C2A00E92774 /* YCViewController.h */,
-				C186975419936C2A00E92774 /* YCViewController.m */,
+				C1F6AB3C1994A847008AADA4 /* YCViewController.h */,
+				C1F6AB3D1994A847008AADA4 /* YCViewController.m */,
 				C186971D1993627300E92774 /* AppDelegate.h */,
 				C186971E1993627300E92774 /* AppDelegate.m */,
 				C18697481993698100E92774 /* OpenVC.h */,
@@ -137,6 +146,12 @@
 				C18697201993627300E92774 /* Main.storyboard */,
 				C18697261993627300E92774 /* Images.xcassets */,
 				C18697151993627300E92774 /* Supporting Files */,
+				C1F6AB3119949C9D008AADA4 /* TestVC1.h */,
+				C1F6AB3219949C9D008AADA4 /* TestVC1.m */,
+				C1F6AB3419949CCA008AADA4 /* TestVC2.h */,
+				C1F6AB3519949CCA008AADA4 /* TestVC2.m */,
+				C1F6AB3719949CE2008AADA4 /* TestVC3.h */,
+				C1F6AB3819949CE2008AADA4 /* TestVC3.m */,
 			);
 			path = Test_Local_Two;
 			sourceTree = "<group>";
@@ -269,10 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F6AB3E1994A847008AADA4 /* YCViewController.m in Sources */,
+				C1F6AB3919949CE2008AADA4 /* TestVC3.m in Sources */,
+				C1F6AB3319949C9D008AADA4 /* TestVC1.m in Sources */,
 				C186975519936C2A00E92774 /* YCLanguageTools.m in Sources */,
 				C186971F1993627300E92774 /* AppDelegate.m in Sources */,
 				C186974A1993698100E92774 /* OpenVC.m in Sources */,
-				C186975619936C2A00E92774 /* YCViewController.m in Sources */,
+				C1F6AB3619949CCA008AADA4 /* TestVC2.m in Sources */,
 				C186971B1993627300E92774 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,8 +326,8 @@
 		C18697201993627300E92774 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C1F6AB2C19949490008AADA4 /* zh-Hans */,
-				C1F6AB2D19949490008AADA4 /* en */,
+				C1F6AB3A1994A7D6008AADA4 /* zh-Hans */,
+				C1F6AB3B1994A7D6008AADA4 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

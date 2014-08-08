@@ -36,7 +36,7 @@
     }
     
     // reload the storyboard in the selected language
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[[YCLanguageTools shareInstance] languageBundle]];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[YCLanguageTools baseBundel]];
     // reload the view controllers
     UIViewController *test1 = [storyBoard instantiateViewControllerWithIdentifier:@"test1"];
     UIViewController *test2 = [storyBoard instantiateViewControllerWithIdentifier:@"test2"];

@@ -64,9 +64,8 @@
 		C186975319936C2A00E92774 /* YCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCViewController.h; sourceTree = "<group>"; };
 		C186975419936C2A00E92774 /* YCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCViewController.m; sourceTree = "<group>"; };
 		C18697571993860000E92774 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C1974D3B1994686C00D18ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C1974D3C1994687800D18ED5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		C1974D3D1994688100D18ED5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		C1F6AB2C19949490008AADA4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		C1F6AB2D19949490008AADA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,9 +308,8 @@
 		C18697201993627300E92774 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C1974D3B1994686C00D18ED5 /* Base */,
-				C1974D3C1994687800D18ED5 /* zh-Hans */,
-				C1974D3D1994688100D18ED5 /* en */,
+				C1F6AB2C19949490008AADA4 /* zh-Hans */,
+				C1F6AB2D19949490008AADA4 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

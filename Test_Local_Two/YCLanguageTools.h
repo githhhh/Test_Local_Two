@@ -20,6 +20,7 @@
 -(void)saveDefineUserLanguage:(NSString *)userLanguage;
 -(NSString *)locatizedStringForkey:(NSString *)keyStr;
 
++(NSBundle *)baseBundel;
 
 -(NSString *)defineUserLanguage;
 @end

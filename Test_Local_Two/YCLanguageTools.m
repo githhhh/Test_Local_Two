@@ -7,6 +7,7 @@
 //
 
 #import "YCLanguageTools.h"
+#define BaseBundle  @"Base"
 @implementation YCLanguageTools
 
 +(YCLanguageTools *)shareInstance{
@@ -32,6 +33,13 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:userLanguage ofType:@"lproj"];
     _languageBundle = [NSBundle bundleWithPath:path];//生成bundle
 }
++(NSBundle *)baseBundel{
+    //获取文件路径
+    NSString *path = [[NSBundle mainBundle] pathForResource:BaseBundle ofType:@"lproj"];
+   return  [NSBundle bundleWithPath:path];//生成bundle
+}
+
+
 -(void)saveDefineUserLanguage:(NSString *)userLanguage{
     if (!userLanguage) {
         return;
@@ -47,6 +55,7 @@
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     [def setValue:userLanguage forKey:kUserLanguage];
     [def synchronize];
+#warning 这里发送通知不合理
     //发送change通知
     [[NSNotificationCenter defaultCenter] postNotificationName:kLanguageChangeNotifination object:self];
 }

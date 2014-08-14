@@ -45,7 +45,10 @@ for localeStringsDir in `find ${currentSbLprojDir} -name "*$localeDirExt" -print
 do
 otherLprojName=$(basename "$localeStringsDir")
 # Skip Base.lproj folder
-if [ "$otherLprojName" != "$baseLprojName" ];then
+if [ "$otherLprojName" == "$baseLprojName" ];then
+continue
+fi
+#on other lproj
 localeStringsPath=$localeStringsDir/$stringsFile
 localeStoryBoardPath=$localeStringsDir/$storyboardFile
 # Just copy base strings file on  not file  or file is empty  else merge
@@ -59,18 +62,34 @@ echo "==========Merge====================="
 awk  'NR == FNR && /^\/\*/ {x=$0; getline; a[x]=$0; next} /^\/\*/ {x=$0; print; getline; $0=a[x]?a[x]:$0; printf $0"\n\n"}' $oldLocaleStringsPath $baseStringsPath > $localeStringsPath
 rm $oldLocaleStringsPath
 #on debug convert .string to .storyboard
-#if [ -e $localeStoryBoardPath];then
-#rm $localeStoryBoardPath
-#fi
-#ibtool --strings-file $localeStringsPath --write $localeStoryBoardPath $storyboardPath
+if [ -e $localeStoryBoardPath];then
+rm $localeStoryBoardPath
 fi
+ibtool --strings-file $localeStringsPath --write $localeStoryBoardPath $storyboardPath
+#remove storyboard to app dir 移动sb 到 app包中
+echo "==================================="
+echo ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}
+#local dir on app app 包种的资源文件夹
+appLocalDir=${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/$otherLprojName
+echo "===========appLocalDir========================"
+echo $appLocalDir
+appLocalFilePath=${appLocalDir}/$storyboardFile
+echo "===========appLocalFilePath========================"
+echo $appLocalFilePath
+echo "===========cp========================"
+cp $localeStoryBoardPath $appLocalFilePath
+echo "===========cp=done======================="
+echo "============7777======================="
+chmod 777 $appLocalFilePath
+echo "============7777========done==============="
+rm $localeStoryBoardPath
 fi
 done
-
 #remove baseString
 rm $baseStringsPath
 #debug
-#if find $storyboardPath -prune -newer $ll -print | grep -q .; then
-#echo "=================="
-#fi
+if find $storyboardPath -prune -newer $ll -print | grep -q .; then
+echo "=================="
+fi
 done
+

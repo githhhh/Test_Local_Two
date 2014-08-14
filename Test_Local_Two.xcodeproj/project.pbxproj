@@ -319,7 +319,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#if [\"$CONFIGURATION\" = \"Debug\"];then\n#${PROJECT_DIR}/Debug_St.sh\n#else\n#${PROJECT_DIR}/Release_St.sh\n#fi\n\n\n\n";
+			shellScript = "#if [\"$CONFIGURATION\" = \"Debug\"];then\n${PROJECT_DIR}/Debug_St.sh\n#else\n#${PROJECT_DIR}/Release_St.sh\n#fi\n\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

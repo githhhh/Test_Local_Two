@@ -1,0 +1,12 @@
+/* Class = "IBUILabel"; text = "hello"; ObjectID = "Iqy-xd-c19"; */
+"Iqy-xd-c19.text" = "你好";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "J6Y-2n-pvn"; */
+"J6Y-2n-pvn.text" = "标签";
+
+/* Class = "IBUIButton"; normalTitle = "hhaBtn"; ObjectID = "K4L-zO-Pqv"; */
+"K4L-zO-Pqv.normalTitle" = "hhaBtn";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "K5e-ln-x3I"; */
+"K5e-ln-x3I.normalTitle" = "按钮";
+

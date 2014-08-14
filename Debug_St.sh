@@ -12,53 +12,76 @@ newStringsExt=".strings.new"
 oldStringsExt=".strings.old"
 localeDirExt=".lproj"
 baseLprojName="Base.lproj"
+#current script  dir
+#echo ${SRCROOT}
 
-
-# Find storyboard file full path inside project folder   current single sb
+# Find storyboard file full path inside project folder
 for storyboardPath in `find ${SRCROOT} -name "*$storyboardExt" -print`
 do
-# Get Base strings file full path
-baseStringsPath=$(echo "$storyboardPath" | sed "s/$storyboardExt/$stringsExt/")
+echo "============storyboardPath======================="
+echo $storyboardPath
 # Get storyboard file name and folder
 storyboardFile=$(basename "$storyboardPath")
 storyboardDir=$(dirname "$storyboardPath")
-
+# Get storyboardDir upLevel dirName  and dir
+currentSbLprojName=$(basename "$storyboardDir")
+currentSbLprojDir=$(dirname "$storyboardDir")
+echo "============currentSbLprojName======================="
+echo $currentSbLprojName
+echo "============currentSbLprojDir======================="
+echo $currentSbLprojDir
+#limite on base.lproj
+if [ "$currentSbLprojName" != "$baseLprojName" ]; then
+echo "==========storyboardDir=============="
+echo $storyboardDir
+continue
+fi
+# Get Base strings file full path
+baseStringsPath=$(echo "$storyboardPath" | sed "s/$storyboardExt/$stringsExt/")
 # Get New Base strings file full path and strings file name
 newBaseStringsPath=$(echo "$storyboardPath" | sed "s/$storyboardExt/$newStringsExt/")
 stringsFile=$(basename "$baseStringsPath")
-#重写转换.string 文件
+#convert .stroyboard to .string
 ibtool --export-strings-file $newBaseStringsPath $storyboardPath
 iconv -f UTF-16 -t UTF-8 $newBaseStringsPath > $baseStringsPath
-
 rm $newBaseStringsPath
-
-# Get all locale strings folder
-for localeStringsDir in `find ${SRCROOT} -name "*$localeDirExt" -print`
+echo "==========for other lproj====================="
+#for  on base.lproj folder and find other language.lproj dir
+for localeStringsDir in `find ${currentSbLprojDir} -name "*$localeDirExt" -print`
 do
-echo $localeStringsPath
-temp=$(basename "$localeStringsDir")
-
+otherLprojName=$(basename "$localeStringsDir")
+echo "==========otherLprojName====================="
+echo $otherLprojName
 # Skip Base.lproj folder
-if [ "$temp" != "$baseLprojName" ];then
+if [ "$otherLprojName" != "$baseLprojName" ];then
 localeStringsPath=$localeStringsDir/$stringsFile
-
-
-# Just copy base strings file on first time
-if [ ! -e $localeStringsPath ]; then
+localeStoryBoardPath=$localeStringsDir/$storyboardFile
+# Just copy base strings file on  not file  or file is empty  else merge
+if [ ! -e $localeStringsPath ]||[ ! -s $localeStringsPath ]; then
 cp $baseStringsPath $localeStringsPath
 else
 oldLocaleStringsPath=$(echo "$localeStringsPath" | sed "s/$stringsExt/$oldStringsExt/")
+echo "==========oldLocaleStringsPath====================="
 echo $oldLocaleStringsPath
 cp $localeStringsPath $oldLocaleStringsPath
 
+echo "==========Merge====================="
 # Merge baseStringsPath to localeStringsPath
 awk  'NR == FNR && /^\/\*/ {x=$0; getline; a[x]=$0; next} /^\/\*/ {x=$0; print; getline; $0=a[x]?a[x]:$0; printf $0"\n\n"}' $oldLocaleStringsPath $baseStringsPath > $localeStringsPath
-
 rm $oldLocaleStringsPath
+#on debug convert .string to .storyboard
+if [ -e $localeStoryBoardPath];then
+rm $localeStoryBoardPath
 fi
-
+ibtool --strings-file $localeStringsPath --write $localeStoryBoardPath $storyboardPath
 fi
-
+fi
 done
 
+#remove baseString
+rm $baseStringsPath
+#debug
+if find $storyboardPath -prune -newer $ll -print | grep -q .; then
+echo "=================="
+fi
 done

@@ -8,7 +8,10 @@
 
 #import "OpenVC.h"
 #import "AppDelegate.h"
+#import "YCBankCardLable.h"
 @interface OpenVC ()
+
+@property (weak, nonatomic) IBOutlet YCBankCardLable *bankLable;
 
 @end
 
@@ -33,6 +36,9 @@
     
     
     
+    _bankLable.cardNum = @"123312331233";
+    
+    
 }
 - (IBAction)switchAction:(id)sender {
     if ( [[[YCLanguageTools shareInstance] defineUserLanguage] isEqualToString:@"zh-Hans"] ) {
@@ -42,6 +48,10 @@
     }
     
     // reload the storyboard in the selected language
+    
+    NSString *mainSb = [[[YCLanguageTools shareInstance] languageBundle] pathForResource:@"Main" ofType:@"storyboard"];
+    NSLog(@"======%@",mainSb);
+
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[[YCLanguageTools shareInstance] languageBundle]];
     // reload the view controllers
     UIViewController *test1 = [storyBoard instantiateViewControllerWithIdentifier:@"test1"];

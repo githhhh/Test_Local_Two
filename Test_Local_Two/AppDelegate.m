@@ -15,7 +15,25 @@
     // Override point for customization after application launch.
     [[YCLanguageTools  shareInstance] initUserLanguage];
 
+    
+    NSString *str = @"123312331233";
+    
+   str =   [str substringToIndex:5];
+    
+    
+    
     return YES;
+}
+-(NSData *)getData{
+    return [[NSData alloc] init];
+}
+-(NSString *)getValueForKey:(NSString *)key{
+    NSData *valueData = [self  getData];
+    if (valueData) {
+        return [NSString new];
+    }else{
+        return nil;
+    }
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

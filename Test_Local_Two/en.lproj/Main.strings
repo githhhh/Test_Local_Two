@@ -1,6 +1,9 @@
 /* Class = "IBUILabel"; text = "Test3"; ObjectID = "5LB-Qf-rH8"; */
 "5LB-Qf-rH8.text" = "Test3";
 
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "69d-SG-QAM"; */
+"69d-SG-QAM.normalTitle" = "Button";
+
 /* Class = "IBUILabel"; text = "Test1"; ObjectID = "8td-cq-zoQ"; */
 "8td-cq-zoQ.text" = "Test1";
 

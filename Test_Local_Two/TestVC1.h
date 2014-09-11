@@ -9,6 +9,6 @@
 #import "YCViewController.h"
 
 @interface TestVC1 : YCViewController
-
+@property(strong,nonatomic)NSString *string;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @end

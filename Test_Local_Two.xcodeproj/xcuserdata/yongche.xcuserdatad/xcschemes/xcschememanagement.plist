@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>OCLint.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Test_Local_Two.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>C186972B1993627300E92774</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1B73B7619AEC53D00CDACA9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

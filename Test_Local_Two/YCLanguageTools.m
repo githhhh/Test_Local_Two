@@ -8,6 +8,11 @@
 
 #import "YCLanguageTools.h"
 #define BaseBundle  @"Base"
+@interface YCLanguageTools(){
+    NSBundle *_storyboardBundle;
+    NSBundle *_languageBundle;
+}
+@end
 @implementation YCLanguageTools
 
 +(YCLanguageTools *)shareInstance{
@@ -30,15 +35,12 @@
         [self saveDefineUserLanguage:userLanguage];
     }
     //获取文件路径
-    NSString *path = [[NSBundle mainBundle] pathForResource:userLanguage ofType:@"lproj"];
-    _languageBundle = [NSBundle bundleWithPath:path];//生成bundle
+    NSString *languagePath = [[NSBundle mainBundle] pathForResource:userLanguage ofType:@"lproj"];
+    _languageBundle = [NSBundle bundleWithPath:languagePath];//生成bundle
+    
+    NSString *storyboardPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"sb/%@",userLanguage] ofType:@"lproj"];
+    _storyboardBundle = [NSBundle bundleWithPath:storyboardPath];//生成bundle
 }
-+(NSBundle *)baseBundel{
-    //获取文件路径
-    NSString *path = [[NSBundle mainBundle] pathForResource:BaseBundle ofType:@"lproj"];
-   return  [NSBundle bundleWithPath:path];//生成bundle
-}
-
 
 -(void)saveDefineUserLanguage:(NSString *)userLanguage{
     if (!userLanguage) {
@@ -49,22 +51,28 @@
         return;
     }
     _currentLanguage = userLanguage;
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:userLanguage ofType:@"lproj" ];
     _languageBundle = [NSBundle bundleWithPath:path];
+    
+    NSString *storyboardPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"sb/%@",userLanguage] ofType:@"lproj"];
+    _storyboardBundle = [NSBundle bundleWithPath:storyboardPath];//生成bundle
     
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     [def setValue:userLanguage forKey:kUserLanguage];
     [def synchronize];
-#warning 这里发送通知不合理
-    //发送change通知
-//    [[NSNotificationCenter defaultCenter] postNotificationName:kLanguageChangeNotifination object:self];
 }
 -(NSString *)defineUserLanguage{
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     NSString *userLanguage = [def valueForKey:kUserLanguage];
     return userLanguage;
 }
-
+//获取sb
+-(UIStoryboard *)locatizedStoryboardWithName:(NSString *)storyBoardName{
+    //_storyboardBundle
+    UIStoryboard *storyboard = [UIStoryboard   storyboardWithName:storyBoardName bundle:_languageBundle];
+    return storyboard ;
+}
 
 //获取标签
 -(NSString *)locatizedStringForkey:(NSString *)keyStr{

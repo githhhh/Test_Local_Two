@@ -33,12 +33,7 @@
     
     _label.text =  [[YCLanguageTools shareInstance] locatizedStringForkey:@"content"];
     
-    
-    
-    
     _bankLable.cardNum = @"123312331233";
-    
-    
 }
 - (IBAction)switchAction:(id)sender {
     if ( [[[YCLanguageTools shareInstance] defineUserLanguage] isEqualToString:@"zh-Hans"] ) {
@@ -46,14 +41,7 @@
     }else{
         [[YCLanguageTools shareInstance]  saveDefineUserLanguage:@"zh-Hans"] ;
     }
-    
-    // reload the storyboard in the selected language
-    
-    NSString *mainSb = [[[YCLanguageTools shareInstance] languageBundle] pathForResource:@"Main" ofType:@"storyboard"];
-    NSLog(@"======%@",mainSb);
-
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[[YCLanguageTools shareInstance] languageBundle]];
-    // reload the view controllers
+    UIStoryboard *storyBoard = [[YCLanguageTools shareInstance]  locatizedStoryboardWithName:@"Main"];
     UIViewController *test1 = [storyBoard instantiateViewControllerWithIdentifier:@"test1"];
     UIViewController *test2 = [storyBoard instantiateViewControllerWithIdentifier:@"test2"];
     UIViewController *test3 = [storyBoard instantiateViewControllerWithIdentifier:@"test3"];

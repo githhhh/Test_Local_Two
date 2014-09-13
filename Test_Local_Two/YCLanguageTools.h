@@ -11,16 +11,13 @@
 #define kLanguageChangeNotifination   @"languageChangeNotifination"
 @interface YCLanguageTools : NSObject
 
-@property (nonatomic,strong)NSBundle *languageBundle;
 @property (nonatomic,strong)NSString *currentLanguage;
-
 
 +(YCLanguageTools *)shareInstance;
 -(void)initUserLanguage;
 -(void)saveDefineUserLanguage:(NSString *)userLanguage;
--(NSString *)locatizedStringForkey:(NSString *)keyStr;
-
-+(NSBundle *)baseBundel;
-
 -(NSString *)defineUserLanguage;
+
+-(NSString *)locatizedStringForkey:(NSString *)keyStr;
+-(UIStoryboard *)locatizedStoryboardWithName:(NSString *)storyBoardName;
 @end

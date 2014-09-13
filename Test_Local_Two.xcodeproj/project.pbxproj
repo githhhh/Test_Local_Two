@@ -39,7 +39,7 @@
 		C186975519936C2A00E92774 /* YCLanguageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C186975219936C2A00E92774 /* YCLanguageTools.m */; };
 		C1A7702119A20B8F00497F54 /* YCBankCardLable.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A7702019A20B8F00497F54 /* YCBankCardLable.m */; };
 		C1CC179A19BEE083001B7C79 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CC179919BEE083001B7C79 /* TestVC.m */; };
-		C1CE581C199C5D04005F6A88 /* Debug_St.sh in Resources */ = {isa = PBXBuildFile; fileRef = C1CE581A199C5D04005F6A88 /* Debug_St.sh */; };
+		C1CE581C199C5D04005F6A88 /* Localizable.sh in Resources */ = {isa = PBXBuildFile; fileRef = C1CE581A199C5D04005F6A88 /* Localizable.sh */; };
 		C1F6AB3319949C9D008AADA4 /* TestVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3219949C9D008AADA4 /* TestVC1.m */; };
 		C1F6AB3619949CCA008AADA4 /* TestVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3519949CCA008AADA4 /* TestVC2.m */; };
 		C1F6AB3919949CE2008AADA4 /* TestVC3.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3819949CE2008AADA4 /* TestVC3.m */; };
@@ -89,7 +89,7 @@
 		C1BCD07419C0179400D7FC8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		C1CC179819BEE083001B7C79 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		C1CC179919BEE083001B7C79 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
-		C1CE581A199C5D04005F6A88 /* Debug_St.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Debug_St.sh; sourceTree = "<group>"; };
+		C1CE581A199C5D04005F6A88 /* Localizable.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Localizable.sh; sourceTree = "<group>"; };
 		C1F6AB3119949C9D008AADA4 /* TestVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC1.h; sourceTree = "<group>"; };
 		C1F6AB3219949C9D008AADA4 /* TestVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC1.m; sourceTree = "<group>"; };
 		C1F6AB3419949CCA008AADA4 /* TestVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC2.h; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				C1869747199364B900E92774 /* Localizable.strings */,
-				C1CE581A199C5D04005F6A88 /* Debug_St.sh */,
+				C1CE581A199C5D04005F6A88 /* Localizable.sh */,
 				C18697141993627300E92774 /* Test_Local_Two */,
 				C18697331993627300E92774 /* Test_Local_TwoTests */,
 				C186970D1993627300E92774 /* Frameworks */,
@@ -222,8 +222,8 @@
 			buildPhases = (
 				C18697071993627300E92774 /* Sources */,
 				C18697081993627300E92774 /* Frameworks */,
-				C18697091993627300E92774 /* Resources */,
 				C18B64911999CA6900D08AE9 /* ShellScript */,
+				C18697091993627300E92774 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -293,7 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C18697271993627300E92774 /* Images.xcassets in Resources */,
-				C1CE581C199C5D04005F6A88 /* Debug_St.sh in Resources */,
+				C1CE581C199C5D04005F6A88 /* Localizable.sh in Resources */,
 				C1869745199364B900E92774 /* Localizable.strings in Resources */,
 				C18697191993627300E92774 /* InfoPlist.strings in Resources */,
 				C18697221993627300E92774 /* Main.storyboard in Resources */,
@@ -317,14 +317,12 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/myfile",
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/newSb",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#if [\"$CONFIGURATION\" = \"Debug\"];then\n${PROJECT_DIR}/Debug_St.sh\n#else\n#${PROJECT_DIR}/Release_St.sh\n#fi\n\n\n\n\n";
+			shellScript = "${PROJECT_DIR}/Localizable.sh\n\n\n\n\n\n";
 		};
 		C1B73B7A19AEC56100CDACA9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

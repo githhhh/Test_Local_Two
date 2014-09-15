@@ -6,9 +6,8 @@
 //  Copyright (c) 2014年 com.yongche. All rights reserved.
 //
 
-#import "YCViewController.h"
 
-@interface TestVC2 : YCViewController
+@interface TestVC2 : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end

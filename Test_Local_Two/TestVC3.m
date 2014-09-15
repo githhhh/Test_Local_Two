@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _label.text =  [[YCLanguageTools shareInstance] locatizedStringForkey:@"content"];
+    _label.text =  LocatizedStirngForkey(@"content");
 
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface OpenVC : YCViewController
+@interface OpenVC : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end

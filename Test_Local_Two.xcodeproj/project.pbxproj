@@ -37,13 +37,10 @@
 		C1869745199364B900E92774 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1869747199364B900E92774 /* Localizable.strings */; };
 		C186974A1993698100E92774 /* OpenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C18697491993698100E92774 /* OpenVC.m */; };
 		C186975519936C2A00E92774 /* YCLanguageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C186975219936C2A00E92774 /* YCLanguageTools.m */; };
-		C1A7702119A20B8F00497F54 /* YCBankCardLable.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A7702019A20B8F00497F54 /* YCBankCardLable.m */; };
-		C1CC179A19BEE083001B7C79 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CC179919BEE083001B7C79 /* TestVC.m */; };
 		C1CE581C199C5D04005F6A88 /* Localizable.sh in Resources */ = {isa = PBXBuildFile; fileRef = C1CE581A199C5D04005F6A88 /* Localizable.sh */; };
 		C1F6AB3319949C9D008AADA4 /* TestVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3219949C9D008AADA4 /* TestVC1.m */; };
 		C1F6AB3619949CCA008AADA4 /* TestVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3519949CCA008AADA4 /* TestVC2.m */; };
 		C1F6AB3919949CE2008AADA4 /* TestVC3.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3819949CE2008AADA4 /* TestVC3.m */; };
-		C1F6AB3E1994A847008AADA4 /* YCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6AB3D1994A847008AADA4 /* YCViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,13 +79,9 @@
 		C186975119936C2A00E92774 /* YCLanguageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCLanguageTools.h; sourceTree = "<group>"; };
 		C186975219936C2A00E92774 /* YCLanguageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCLanguageTools.m; sourceTree = "<group>"; };
 		C18697571993860000E92774 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C1A7701F19A20B8F00497F54 /* YCBankCardLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCBankCardLable.h; sourceTree = "<group>"; };
-		C1A7702019A20B8F00497F54 /* YCBankCardLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCBankCardLable.m; sourceTree = "<group>"; };
 		C1BCD07219C0176D00D7FC8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1BCD07319C0178F00D7FC8E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		C1BCD07419C0179400D7FC8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		C1CC179819BEE083001B7C79 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
-		C1CC179919BEE083001B7C79 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		C1CE581A199C5D04005F6A88 /* Localizable.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Localizable.sh; sourceTree = "<group>"; };
 		C1F6AB3119949C9D008AADA4 /* TestVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC1.h; sourceTree = "<group>"; };
 		C1F6AB3219949C9D008AADA4 /* TestVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC1.m; sourceTree = "<group>"; };
@@ -96,8 +89,6 @@
 		C1F6AB3519949CCA008AADA4 /* TestVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC2.m; sourceTree = "<group>"; };
 		C1F6AB3719949CE2008AADA4 /* TestVC3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC3.h; sourceTree = "<group>"; };
 		C1F6AB3819949CE2008AADA4 /* TestVC3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC3.m; sourceTree = "<group>"; };
-		C1F6AB3C1994A847008AADA4 /* YCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCViewController.h; sourceTree = "<group>"; };
-		C1F6AB3D1994A847008AADA4 /* YCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,12 +150,8 @@
 		C18697141993627300E92774 /* Test_Local_Two */ = {
 			isa = PBXGroup;
 			children = (
-				C1A7701F19A20B8F00497F54 /* YCBankCardLable.h */,
-				C1A7702019A20B8F00497F54 /* YCBankCardLable.m */,
 				C186975119936C2A00E92774 /* YCLanguageTools.h */,
 				C186975219936C2A00E92774 /* YCLanguageTools.m */,
-				C1F6AB3C1994A847008AADA4 /* YCViewController.h */,
-				C1F6AB3D1994A847008AADA4 /* YCViewController.m */,
 				C186971D1993627300E92774 /* AppDelegate.h */,
 				C186971E1993627300E92774 /* AppDelegate.m */,
 				C18697481993698100E92774 /* OpenVC.h */,
@@ -178,8 +165,6 @@
 				C1F6AB3519949CCA008AADA4 /* TestVC2.m */,
 				C1F6AB3719949CE2008AADA4 /* TestVC3.h */,
 				C1F6AB3819949CE2008AADA4 /* TestVC3.m */,
-				C1CC179819BEE083001B7C79 /* TestVC.h */,
-				C1CC179919BEE083001B7C79 /* TestVC.m */,
 			);
 			path = Test_Local_Two;
 			sourceTree = "<group>";
@@ -222,8 +207,8 @@
 			buildPhases = (
 				C18697071993627300E92774 /* Sources */,
 				C18697081993627300E92774 /* Frameworks */,
-				C18B64911999CA6900D08AE9 /* ShellScript */,
 				C18697091993627300E92774 /* Resources */,
+				C18B64911999CA6900D08AE9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -344,15 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1F6AB3E1994A847008AADA4 /* YCViewController.m in Sources */,
 				C1F6AB3919949CE2008AADA4 /* TestVC3.m in Sources */,
 				C1F6AB3319949C9D008AADA4 /* TestVC1.m in Sources */,
 				C186975519936C2A00E92774 /* YCLanguageTools.m in Sources */,
 				C186971F1993627300E92774 /* AppDelegate.m in Sources */,
-				C1A7702119A20B8F00497F54 /* YCBankCardLable.m in Sources */,
 				C186974A1993698100E92774 /* OpenVC.m in Sources */,
 				C1F6AB3619949CCA008AADA4 /* TestVC2.m in Sources */,
-				C1CC179A19BEE083001B7C79 /* TestVC.m in Sources */,
 				C186971B1993627300E92774 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +415,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: bin tang (582BR8LX4X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: bin tang (582BR8LX4X)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -471,7 +454,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: bin tang (582BR8LX4X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: bin tang (582BR8LX4X)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -492,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: bin tang (582BR8LX4X)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Test_Local_Two/Test_Local_Two-Prefix.pch";
 				INFOPLIST_FILE = "Test_Local_Two/Test_Local_Two-Info.plist";
@@ -505,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: bin tang (582BR8LX4X)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Test_Local_Two/Test_Local_Two-Prefix.pch";
 				INFOPLIST_FILE = "Test_Local_Two/Test_Local_Two-Info.plist";

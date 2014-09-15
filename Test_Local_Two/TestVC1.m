@@ -7,7 +7,6 @@
 //
 
 #import "TestVC1.h"
-#import "TestVC.h"
 @interface TestVC1 ()
 
 @end
@@ -27,25 +26,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _label.text =  [[YCLanguageTools shareInstance] locatizedStringForkey:@"content"];
+    _label.text =  LocatizedStirngForkey(@"content");
 
-    _string = [[YCLanguageTools shareInstance] locatizedStringForkey:@"content"];
-    
-    
 }
-- (IBAction)testAction:(id)sender {
-    [self performSegueWithIdentifier:@"test" sender:self];
-    
-    
-}
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if (segue.destinationViewController) {
-        TestVC *tvc = segue.destinationViewController;
-        tvc.str = [_string copy];
-    }
-    
-    
-}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

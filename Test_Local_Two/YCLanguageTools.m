@@ -9,7 +9,6 @@
 #import "YCLanguageTools.h"
 #define BaseBundle  @"Base"
 @interface YCLanguageTools(){
-    NSBundle *_storyboardBundle;
     NSBundle *_languageBundle;
 }
 @end
@@ -37,9 +36,6 @@
     //获取文件路径
     NSString *languagePath = [[NSBundle mainBundle] pathForResource:userLanguage ofType:@"lproj"];
     _languageBundle = [NSBundle bundleWithPath:languagePath];//生成bundle
-    
-    NSString *storyboardPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"sb/%@",userLanguage] ofType:@"lproj"];
-    _storyboardBundle = [NSBundle bundleWithPath:storyboardPath];//生成bundle
 }
 
 -(void)saveDefineUserLanguage:(NSString *)userLanguage{
@@ -55,9 +51,6 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:userLanguage ofType:@"lproj" ];
     _languageBundle = [NSBundle bundleWithPath:path];
     
-    NSString *storyboardPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"sb/%@",userLanguage] ofType:@"lproj"];
-    _storyboardBundle = [NSBundle bundleWithPath:storyboardPath];//生成bundle
-    
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     [def setValue:userLanguage forKey:kUserLanguage];
     [def synchronize];
@@ -69,7 +62,6 @@
 }
 //获取sb
 -(UIStoryboard *)locatizedStoryboardWithName:(NSString *)storyBoardName{
-    //_storyboardBundle
     UIStoryboard *storyboard = [UIStoryboard   storyboardWithName:storyBoardName bundle:_languageBundle];
     return storyboard ;
 }

@@ -8,10 +8,8 @@
 
 #import "OpenVC.h"
 #import "AppDelegate.h"
-#import "YCBankCardLable.h"
 @interface OpenVC ()
 
-@property (weak, nonatomic) IBOutlet YCBankCardLable *bankLable;
 
 @end
 
@@ -31,9 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _label.text =  [[YCLanguageTools shareInstance] locatizedStringForkey:@"content"];
-    
-    _bankLable.cardNum = @"123312331233";
+    _label.text =  LocatizedStirngForkey(@"content");
 }
 - (IBAction)switchAction:(id)sender {
     if ( [[[YCLanguageTools shareInstance] defineUserLanguage] isEqualToString:@"zh-Hans"] ) {
@@ -43,9 +39,17 @@
     }
     UIStoryboard *storyBoard = [[YCLanguageTools shareInstance]  locatizedStoryboardWithName:@"Main"];
     UIViewController *test1 = [storyBoard instantiateViewControllerWithIdentifier:@"test1"];
+    test1.tabBarItem.title = @"test1";
+    
     UIViewController *test2 = [storyBoard instantiateViewControllerWithIdentifier:@"test2"];
+    test2.tabBarItem.title = @"test2";
+
     UIViewController *test3 = [storyBoard instantiateViewControllerWithIdentifier:@"test3"];
+    test3.tabBarItem.title = @"test3";
+
     UIViewController *open = [storyBoard instantiateViewControllerWithIdentifier:@"open"];
+    open.tabBarItem.title = @"open";
+
     // set them
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     //此处重新加载app rootViewController.我使用tabbar

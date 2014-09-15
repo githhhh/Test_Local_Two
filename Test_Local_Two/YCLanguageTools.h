@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #define kUserLanguage @"userLanguage"
-#define kLanguageChangeNotifination   @"languageChangeNotifination"
 @interface YCLanguageTools : NSObject
 
 @property (nonatomic,strong)NSString *currentLanguage;

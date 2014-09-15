@@ -5,31 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-	<string>369B5C87-8A18-43BD-A3C6-2FBCE4145E3F</string>
-=======
-	<string>200F0A7D-93EE-4800-8402-431527E292F3</string>
->>>>>>> notUseBase
+	<string>B9239160-739A-402A-ADAB-55A2A9BE8742</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Test_Local_Two</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>388F5E00-1A7E-4E3C-B4C0-D211D503560C</key>
-=======
-		<key>324FE8BF-B8D3-40C9-91AF-3EE5290A8902</key>
->>>>>>> notUseBase
+		<key>11DC624E-9850-4208-B9DA-C28696DCCB73</key>
 		<string>https://github.com/githhhh/Test_Local_Two.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Test_Local_Two.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>388F5E00-1A7E-4E3C-B4C0-D211D503560C</key>
-=======
-		<key>324FE8BF-B8D3-40C9-91AF-3EE5290A8902</key>
->>>>>>> notUseBase
+		<key>11DC624E-9850-4208-B9DA-C28696DCCB73</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -37,22 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-<<<<<<< HEAD
-	<string>388F5E00-1A7E-4E3C-B4C0-D211D503560C</string>
-=======
-	<string>324FE8BF-B8D3-40C9-91AF-3EE5290A8902</string>
->>>>>>> notUseBase
+	<string>11DC624E-9850-4208-B9DA-C28696DCCB73</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-<<<<<<< HEAD
-			<string>388F5E00-1A7E-4E3C-B4C0-D211D503560C</string>
-=======
-			<string>324FE8BF-B8D3-40C9-91AF-3EE5290A8902</string>
->>>>>>> notUseBase
+			<string>11DC624E-9850-4208-B9DA-C28696DCCB73</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Test_Local_Two</string>
 		</dict>

@@ -1,18 +1,19 @@
 //
-//  TestVC1.m
+//  TestVC.m
 //  Test_Local_Two
 //
-//  Created by admin on 14-8-8.
+//  Created by admin on 14-9-9.
 //  Copyright (c) 2014年 com.yongche. All rights reserved.
 //
 
-#import "TestVC1.h"
 #import "TestVC.h"
-@interface TestVC1 ()
+
+@interface TestVC ()
+@property (weak, nonatomic) IBOutlet UILabel *lable;
 
 @end
 
-@implementation TestVC1
+@implementation TestVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,33 +28,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _label.text =  [[YCLanguageTools shareInstance] locatizedStringForkey:@"content"];
+    _lable.text = _str;
+}
 
-    _string = [[YCLanguageTools shareInstance] locatizedStringForkey:@"content"];
-    
-    
-}
-- (IBAction)testAction:(id)sender {
-    [self performSegueWithIdentifier:@"test" sender:self];
-    
-    
-}
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if (segue.destinationViewController) {
-        TestVC *tvc = segue.destinationViewController;
-        tvc.str = [_string copy];
-    }
-    
-    
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 /*
 #pragma mark - Navigation

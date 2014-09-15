@@ -1,6 +1,9 @@
 /* Class = "IBUILabel"; text = "Test3"; ObjectID = "5LB-Qf-rH8"; */
 "5LB-Qf-rH8.text" = "Test3";
 
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "69d-SG-QAM"; */
+"69d-SG-QAM.normalTitle" = "Button";
+
 /* Class = "IBUILabel"; text = "Test1"; ObjectID = "8td-cq-zoQ"; */
 "8td-cq-zoQ.text" = "Test1";
 
@@ -18,9 +21,6 @@
 
 /* Class = "IBUITabBarItem"; title = "test2"; ObjectID = "h6u-j3-Uiw"; */
 "h6u-j3-Uiw.title" = "test2";
-
-/* Class = "IBUIButton"; normalTitle = "hhabtn"; ObjectID = "hhS-C3-ynS"; */
-"hhS-C3-ynS.normalTitle" = "hhabtn";
 
 /* Class = "IBUITabBarItem"; title = "test1"; ObjectID = "xLJ-UF-fUO"; */
 "xLJ-UF-fUO.title" = "test1";

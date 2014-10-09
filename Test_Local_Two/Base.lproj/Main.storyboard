@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vpo-Xf-Zy9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vpo-Xf-Zy9">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -79,17 +79,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIx-aM-pwH">
+                                <rect key="frame" x="96" y="359" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="XIB">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="xibAction:" destination="4ew-Te-g4i" eventType="touchUpInside" id="huS-eJ-Dq9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="open" id="duu-Bn-5Pz"/>
+                    <tabBarItem key="tabBarItem" title="open" id="yuV-1k-9cE"/>
+                    <navigationItem key="navigationItem" id="bZT-sU-h2V"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="label" destination="1Tp-o6-DnG" id="ZXa-aC-hb5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsm-bT-ief" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573" y="627"/>
+            <point key="canvasLocation" x="1340" y="211"/>
         </scene>
         <!--TestVC2 - test2-->
         <scene sceneID="fVq-6B-Xnu">
@@ -143,7 +155,7 @@
                         <segue destination="Wbh-KA-PqH" kind="relationship" relationship="viewControllers" id="3n9-FT-CPa"/>
                         <segue destination="kn0-wV-p9s" kind="relationship" relationship="viewControllers" id="QG1-7r-HFH"/>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="Jzs-yj-ova"/>
-                        <segue destination="4ew-Te-g4i" kind="relationship" relationship="viewControllers" id="WWF-RV-a53"/>
+                        <segue destination="4ew-Te-g4i" kind="relationship" relationship="viewControllers" id="n5U-lO-vrQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6v-z5-EA2" userLabel="First Responder" sceneMemberID="firstResponder"/>

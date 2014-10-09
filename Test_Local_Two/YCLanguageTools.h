@@ -11,6 +11,7 @@
 @interface YCLanguageTools : NSObject
 
 @property (nonatomic,strong)NSString *currentLanguage;
+@property (nonatomic,strong)NSBundle *languageBundle;
 
 +(YCLanguageTools *)shareInstance;
 -(void)initUserLanguage;

@@ -6,8 +6,15 @@
 #  Created by admin on 14-8-12.
 #  Copyright (c) 2014年 com.yongche. All rights reserved.
 
+#define global parameter
 storyboardExt=".storyboard"
 appStoryboardExt=".storyboardc"
+
+
+#function localizable
+function localizableFun(){
+
+#define local parameter
 stringsExt=".strings"
 newStringsExt=".strings.new"
 oldStringsExt=".strings.old"
@@ -114,3 +121,16 @@ rm $baseStringsPath
 #echo "==========debug========"
 #fi
 done
+
+}
+
+#call fun
+localizableFun
+
+#change arg
+storyboardExt=".xib"
+appStoryboardExt=".nib"
+
+#call fun
+localizableFun
+

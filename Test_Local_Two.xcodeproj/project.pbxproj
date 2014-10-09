@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		C14F612419E67FED00FAEFB8 /* TestXib.m in Sources */ = {isa = PBXBuildFile; fileRef = C14F612219E67FED00FAEFB8 /* TestXib.m */; };
+		C14F612619E682C400FAEFB8 /* TestXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14F612819E682C400FAEFB8 /* TestXib.xib */; };
 		C186970F1993627300E92774 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C186970E1993627300E92774 /* Foundation.framework */; };
 		C18697111993627300E92774 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18697101993627300E92774 /* CoreGraphics.framework */; };
 		C18697131993627300E92774 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18697121993627300E92774 /* UIKit.framework */; };
@@ -54,6 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C14F612119E67FED00FAEFB8 /* TestXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestXib.h; sourceTree = "<group>"; };
+		C14F612219E67FED00FAEFB8 /* TestXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestXib.m; sourceTree = "<group>"; };
+		C14F612719E682C400FAEFB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TestXib.xib; sourceTree = "<group>"; };
+		C14F612A19E682C700FAEFB8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TestXib.strings"; sourceTree = "<group>"; };
+		C14F612C19E682C800FAEFB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TestXib.strings; sourceTree = "<group>"; };
 		C186970B1993627300E92774 /* Test_Local_Two.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test_Local_Two.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C186970E1993627300E92774 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C18697101993627300E92774 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -165,6 +172,9 @@
 				C1F6AB3519949CCA008AADA4 /* TestVC2.m */,
 				C1F6AB3719949CE2008AADA4 /* TestVC3.h */,
 				C1F6AB3819949CE2008AADA4 /* TestVC3.m */,
+				C14F612119E67FED00FAEFB8 /* TestXib.h */,
+				C14F612219E67FED00FAEFB8 /* TestXib.m */,
+				C14F612819E682C400FAEFB8 /* TestXib.xib */,
 			);
 			path = Test_Local_Two;
 			sourceTree = "<group>";
@@ -282,6 +292,7 @@
 				C1869745199364B900E92774 /* Localizable.strings in Resources */,
 				C18697191993627300E92774 /* InfoPlist.strings in Resources */,
 				C18697221993627300E92774 /* Main.storyboard in Resources */,
+				C14F612619E682C400FAEFB8 /* TestXib.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +347,7 @@
 				C186974A1993698100E92774 /* OpenVC.m in Sources */,
 				C1F6AB3619949CCA008AADA4 /* TestVC2.m in Sources */,
 				C186971B1993627300E92774 /* main.m in Sources */,
+				C14F612419E67FED00FAEFB8 /* TestXib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +370,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C14F612819E682C400FAEFB8 /* TestXib.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C14F612719E682C400FAEFB8 /* Base */,
+				C14F612A19E682C700FAEFB8 /* zh-Hans */,
+				C14F612C19E682C800FAEFB8 /* en */,
+			);
+			name = TestXib.xib;
+			sourceTree = "<group>";
+		};
 		C18697171993627300E92774 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

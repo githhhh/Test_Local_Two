@@ -8,6 +8,7 @@
 
 #import "OpenVC.h"
 #import "AppDelegate.h"
+#import "TestXib.h"
 @interface OpenVC ()
 
 
@@ -31,6 +32,19 @@
     
     _label.text =  LocatizedStirngForkey(@"content");
 }
+
+- (IBAction)xibAction:(id)sender {
+    
+    TestXib *testXib = [[TestXib alloc] initWithNibName:@"TestXib" bundle:[[YCLanguageTools shareInstance] languageBundle]];
+    //[[YCLanguageTools shareInstance] languageBundle]
+//    [self.navigationController pushViewController:testXib animated:YES];
+    [self.view addSubview:testXib.view];
+    
+}
+
+
+
+
 - (IBAction)switchAction:(id)sender {
     if ( [[[YCLanguageTools shareInstance] defineUserLanguage] isEqualToString:@"zh-Hans"] ) {
         [[YCLanguageTools shareInstance]  saveDefineUserLanguage:@"en"] ;

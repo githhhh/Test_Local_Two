@@ -13,14 +13,17 @@
 /* Class = "IBUILabel"; text = "Test2"; ObjectID = "NT7-J3-MH3"; */
 "NT7-J3-MH3.text" = "Test2";
 
-/* Class = "IBUITabBarItem"; title = "open"; ObjectID = "duu-Bn-5Pz"; */
-"duu-Bn-5Pz.title" = "open";
+/* Class = "IBUIButton"; normalTitle = "XIB"; ObjectID = "aIx-aM-pwH"; */
+"aIx-aM-pwH.normalTitle" = "XIB";
 
 /* Class = "IBUIButton"; normalTitle = "switch"; ObjectID = "fcy-RS-TKs"; */
 "fcy-RS-TKs.normalTitle" = "switch";
 
 /* Class = "IBUITabBarItem"; title = "test2"; ObjectID = "h6u-j3-Uiw"; */
 "h6u-j3-Uiw.title" = "test2";
+
+/* Class = "IBUITabBarItem"; title = "open"; ObjectID = "yuV-1k-9cE"; */
+"yuV-1k-9cE.title" = "open";
 
 /* Class = "IBUITabBarItem"; title = "test3"; ObjectID = "zql-zX-AGL"; */
 "zql-zX-AGL.title" = "test3";

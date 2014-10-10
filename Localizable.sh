@@ -1,18 +1,19 @@
 #!/bin/sh
 
-#  Debug_St.sh
-#  Test_Local_Two
+#  Localizable.sh
+#  Test_Local_Two on github
+#  internationalization for xib or stroyboard on  project
 #
-#  Created by admin on 14-8-12.
-#  Copyright (c) 2014年 com.yongche. All rights reserved.
+#  Created by githhhh on 14-10-10.
+#  Copyright (c) 2014年 . All rights reserved.
 
-#define global parameter
-storyboardExt=".storyboard"
-appStoryboardExt=".storyboardc"
+#default global parameter is storyboard
+xibOrsbExt=".storyboard"
+appXibOrsbExt=".storyboardc"  #compiled .storyboard is  .storyboardc
 
 
-#function localizable
-function localizableFun(){
+#Define a function
+function localXibOrsbFun(){
 
 #define local parameter
 stringsExt=".strings"
@@ -22,43 +23,43 @@ localeDirExt=".lproj"
 baseLprojName="Base.lproj"
 
 
-# Find storyboard file full path inside project folder
-for storyboardPath in `find ${SRCROOT} -name "*$storyboardExt" -print`
+# Find storyboard or xib  file full path inside project folder
+for xibOrsbPath in `find ${SRCROOT} -name "*$xibOrsbExt" -print`
 do
-# Get storyboard file name and folder
-storyboardFile=$(basename "$storyboardPath")
+# Get storyboard or xib file name and folder
+xibOrsbFile=$(basename "$xibOrsbPath")
 
-#compiled .storyboard  编译后的storyboard is storyboardc    .storyboardc is dir
-file=$storyboardFile
-storyboardfileName=${file%.*}
-onappStoryboardFileName=$storyboardfileName$appStoryboardExt
+#compiled .storyboard or .xib   to   storyboardc or nib .   .storyboardc and .nib is dir
+file=$xibOrsbFile
+xibOrsbFileName=${file%.*}
+onappXibOrsbFileName=$xibOrsbFileName$appXibOrsbExt
 
-#storyboardDir
-storyboardDir=$(dirname "$storyboardPath")
+#xibOrsbDir
+xibOrsbDir=$(dirname "$xibOrsbPath")
 
-# Get storyboardDir upLevel dirName  and dir
-currentSbLprojName=$(basename "$storyboardDir")
-currentSbLprojDir=$(dirname "$storyboardDir")
+# Get xibOrsbDir upLevel dirName  and dir
+current_XibOrsb_LprojName=$(basename "$xibOrsbDir")
+current_XibOrsb_LprojDir=$(dirname "$xibOrsbDir")
 
 #limite on base.lproj
-if [ "$currentSbLprojName" != "$baseLprojName" ]; then
+if [ "$current_XibOrsb_LprojName" != "$baseLprojName" ]; then
 continue
 fi
 
 # Get Base strings file full path
-baseStringsPath=$(echo "$storyboardPath" | sed "s/$storyboardExt/$stringsExt/")
+baseStringsPath=$(echo "$xibOrsbPath" | sed "s/$xibOrsbExt/$stringsExt/")
 
 # Get New Base strings file full path and strings file name
-newBaseStringsPath=$(echo "$storyboardPath" | sed "s/$storyboardExt/$newStringsExt/")
+newBaseStringsPath=$(echo "$xibOrsbPath" | sed "s/$xibOrsbExt/$newStringsExt/")
 stringsFile=$(basename "$baseStringsPath")
 
-#convert .stroyboard to .string
-ibtool --export-strings-file $newBaseStringsPath $storyboardPath
+#convert .stroyboard or .xib  to .string
+ibtool --export-strings-file $newBaseStringsPath $xibOrsbPath
 iconv -f UTF-16 -t UTF-8 $newBaseStringsPath > $baseStringsPath
 rm $newBaseStringsPath
 
 #for  on base.lproj dir and find other language.lproj dir maxdepth 1
-for localeStringsDir in `find ${currentSbLprojDir}   -name "*$localeDirExt" -maxdepth 1  -print`
+for localeStringsDir in `find ${current_XibOrsb_LprojDir}   -name "*$localeDirExt" -maxdepth 1  -print`
 do
 
 #localeStringsDir
@@ -71,7 +72,7 @@ fi
 
 #on other lproj
 localeStringsPath=$localeStringsDir/$stringsFile
-localeStoryBoardPath=$localeStringsDir/$storyboardFile
+localeXibOrsbPath=$localeStringsDir/$xibOrsbFile
 
 # Just copy base strings file on  not file  or file is empty  else merge
 if [ ! -e $localeStringsPath ]||[ ! -s $localeStringsPath ]; then
@@ -87,28 +88,28 @@ fi
 
 
 
-#.string to .storyboard with ibtool on local.lproj
-ibtool --strings-file $localeStringsPath --write $localeStoryBoardPath $storyboardPath
+#.string to .storyboard or .xib with ibtool on local.lproj
+ibtool --strings-file $localeStringsPath --write $localeXibOrsbPath $xibOrsbPath
 
-#.stroyboard to  .storyboardc on local.lproj
-appStoryboardFile=$localeStringsDir/$onappStoryboardFileName
-ibtool --errors --warnings --notices --minimum-deployment-target 6.0  --output-format human-readable-text --compile  $appStoryboardFile $localeStoryBoardPath
+#(.stroyboard to  .storyboardc) or (.xib to .nib)     on local.lproj
+appXibOrsbFile=$localeStringsDir/$onappXibOrsbFileName
+ibtool --errors --warnings --notices --minimum-deployment-target 6.0  --output-format human-readable-text --compile  $appXibOrsbFile $localeXibOrsbPath
 
-#rm localeStoryBoardPath
-rm $localeStoryBoardPath
+#rm localeXibOrsbPath
+rm $localeXibOrsbPath
 
-#cp .storyboardc to local.lproj on app
+#cp .storyboardc or .nib to local.lproj on app
 localdirNameOnApp=${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/$otherLprojName
 
+#Judge .lproj exists, because this script runs before the copy resource files.
 #判断.lproj 是否存在 ,因为此脚本运行在 拷贝资源文件之前。
 if [ ! -x "$localdirNameOnApp" ]; then
 mkdir "$localdirNameOnApp"
 fi
-cp -r  $appStoryboardFile $localdirNameOnApp
+cp -r  $appXibOrsbFile $localdirNameOnApp
 
-#appStoryboardFile is dir
-rm -rf $appStoryboardFile
-
+#appXibOrsbFile is dir
+rm -rf $appXibOrsbFile
 
 done
 
@@ -117,20 +118,22 @@ done
 rm $baseStringsPath
 
 #debug
-#if find $storyboardPath -prune -newer $ll -print | grep -q .; then
+#if find $xibOrsbPath -prune -newer $ll -print | grep -q .; then
 #echo "==========debug========"
 #fi
 done
 
 }
 
-#call fun
-localizableFun
 
-#change arg
-storyboardExt=".xib"
-appStoryboardExt=".nib"
 
-#call fun
-localizableFun
+#call function
+localXibOrsbFun
+
+#change global parameter to xib
+xibOrsbExt=".xib"
+appXibOrsbExt=".nib"
+
+#call function
+localXibOrsbFun
 

@@ -93,6 +93,8 @@ ibtool --strings-file $localeStringsPath --write $localeXibOrsbPath $xibOrsbPath
 
 #(.stroyboard to  .storyboardc) or (.xib to .nib)     on local.lproj
 appXibOrsbFile=$localeStringsDir/$onappXibOrsbFileName
+
+#if your xib or storyboard use Auto Layout . target must be is 6.0 or after
 ibtool --errors --warnings --notices --minimum-deployment-target 6.0  --output-format human-readable-text --compile  $appXibOrsbFile $localeXibOrsbPath
 
 #rm localeXibOrsbPath

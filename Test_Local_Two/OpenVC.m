@@ -8,7 +8,7 @@
 
 #import "OpenVC.h"
 #import "AppDelegate.h"
-#import "TestXib.h"
+//#import "TestXib.h"
 @interface OpenVC ()
 
 
@@ -35,10 +35,10 @@
 
 - (IBAction)xibAction:(id)sender {
     
-    TestXib *testXib = [[TestXib alloc] initWithNibName:@"TestXib" bundle:[[YCLanguageTools shareInstance] languageBundle]];
-    //[[YCLanguageTools shareInstance] languageBundle]
-//    [self.navigationController pushViewController:testXib animated:YES];
-    [self.view addSubview:testXib.view];
+//    TestXib *testXib = [[TestXib alloc] initWithNibName:@"TestXib" bundle:[[YCLanguageTools shareInstance] languageBundle]];
+//    //[[YCLanguageTools shareInstance] languageBundle]
+////    [self.navigationController pushViewController:testXib animated:YES];
+//    [self.view addSubview:testXib.view];
     
 }
 

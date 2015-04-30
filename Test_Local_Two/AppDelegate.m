@@ -14,6 +14,15 @@
 {
     // Override point for customization after application launch.
     [[YCLanguageTools  shareInstance] initUserLanguage];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    UIStoryboard *storyBoard = [[YCLanguageTools shareInstance]  locatizedStoryboardWithName:@"Main"];
+    UITabBarController *tabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"tabBarController"];
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 

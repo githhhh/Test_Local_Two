@@ -28,6 +28,7 @@
     // Do any additional setup after loading the view.
     _label.text =  LocatizedStirngForkey(@"content");
 
+    
 }
 
 - (void)didReceiveMemoryWarning

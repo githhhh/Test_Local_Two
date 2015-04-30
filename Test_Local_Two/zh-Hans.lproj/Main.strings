@@ -1,30 +1,24 @@
-/* Class = "IBUILabel"; text = "Test3"; ObjectID = "5LB-Qf-rH8"; */
+/* Class = "UILabel"; text = "Test3"; ObjectID = "5LB-Qf-rH8"; */
 "5LB-Qf-rH8.text" = "测试3";
 
-/* Class = "IBUITabBarItem"; title = "test1"; ObjectID = "8Oq-dn-Enp"; */
-"8Oq-dn-Enp.title" = "测试1";
-
-/* Class = "IBUILabel"; text = "Test1"; ObjectID = "8td-cq-zoQ"; */
+/* Class = "UILabel"; text = "Test1"; ObjectID = "8td-cq-zoQ"; */
 "8td-cq-zoQ.text" = "测试1";
 
-/* Class = "IBUILabel"; text = "open"; ObjectID = "KMT-0a-4Ts"; */
-"KMT-0a-4Ts.text" = "切换";
+/* Class = "UILabel"; text = "open"; ObjectID = "KMT-0a-4Ts"; */
+"KMT-0a-4Ts.text" = "打开";
 
-/* Class = "IBUILabel"; text = "Test2"; ObjectID = "NT7-J3-MH3"; */
-"NT7-J3-MH3.text" = "测试2";
+/* Class = "UIButton"; normalTitle = "GotoXib"; ObjectID = "L04-3R-tka"; */
+"L04-3R-tka.normalTitle" = "看看Xib";
 
-/* Class = "IBUIButton"; normalTitle = "XIB"; ObjectID = "aIx-aM-pwH"; */
-"aIx-aM-pwH.normalTitle" = "XIB";
+/* Class = "UILabel"; text = "Test2"; ObjectID = "NT7-J3-MH3"; */
+"NT7-J3-MH3.text" = "测试1";
 
-/* Class = "IBUIButton"; normalTitle = "switch"; ObjectID = "fcy-RS-TKs"; */
+/* Class = "UINavigationItem"; title = "open"; ObjectID = "bZT-sU-h2V"; */
+"bZT-sU-h2V.title" = "打开";
+
+/* Class = "UIButton"; normalTitle = "switch"; ObjectID = "fcy-RS-TKs"; */
 "fcy-RS-TKs.normalTitle" = "切换";
 
-/* Class = "IBUITabBarItem"; title = "test2"; ObjectID = "h6u-j3-Uiw"; */
-"h6u-j3-Uiw.title" = "测试2";
-
-/* Class = "IBUITabBarItem"; title = "open"; ObjectID = "yuV-1k-9cE"; */
-"yuV-1k-9cE.title" = "open";
-
-/* Class = "IBUITabBarItem"; title = "test3"; ObjectID = "zql-zX-AGL"; */
-"zql-zX-AGL.title" = "测试3";
+/* Class = "UITabBarItem"; badgeValue = "1"; ObjectID = "yuV-1k-9cE"; */
+"yuV-1k-9cE.badgeValue" = "1";
 

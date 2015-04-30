@@ -21,6 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		8BDC449A1AEF905700D8A0B8 /* IMG_2268.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8BDC449C1AEF905700D8A0B8 /* IMG_2268.JPG */; };
+		8BDC44A31AF0BD6200D8A0B8 /* btnbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BDC44A21AF0BD6200D8A0B8 /* btnbg.png */; };
+		8BDC44A61AF1DA7700D8A0B8 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC44A51AF1DA7700D8A0B8 /* CustomTabBarController.m */; };
+		8BDC44A91AF1F3D600D8A0B8 /* TestXIb.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC44A81AF1F3D600D8A0B8 /* TestXIb.m */; };
+		8BDC44AE1AF1F68100D8A0B8 /* TestXIb.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BDC44B01AF1F68100D8A0B8 /* TestXIb.xib */; };
 		C186970F1993627300E92774 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C186970E1993627300E92774 /* Foundation.framework */; };
 		C18697111993627300E92774 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18697101993627300E92774 /* CoreGraphics.framework */; };
 		C18697131993627300E92774 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18697121993627300E92774 /* UIKit.framework */; };
@@ -54,6 +59,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8BDC449B1AEF905700D8A0B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Base; path = Base.lproj/IMG_2268.JPG; sourceTree = "<group>"; };
+		8BDC44A21AF0BD6200D8A0B8 /* btnbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnbg.png; sourceTree = "<group>"; };
+		8BDC44A41AF1DA7700D8A0B8 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
+		8BDC44A51AF1DA7700D8A0B8 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
+		8BDC44A71AF1F3D600D8A0B8 /* TestXIb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestXIb.h; sourceTree = "<group>"; };
+		8BDC44A81AF1F3D600D8A0B8 /* TestXIb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestXIb.m; sourceTree = "<group>"; };
+		8BDC44AF1AF1F68100D8A0B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TestXIb.xib; sourceTree = "<group>"; };
+		8BDC44B21AF1F68200D8A0B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TestXIb.strings; sourceTree = "<group>"; };
+		8BDC44B41AF1F68300D8A0B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TestXIb.strings"; sourceTree = "<group>"; };
 		C186970B1993627300E92774 /* Test_Local_Two.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test_Local_Two.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C186970E1993627300E92774 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C18697101993627300E92774 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,21 +164,28 @@
 		C18697141993627300E92774 /* Test_Local_Two */ = {
 			isa = PBXGroup;
 			children = (
+				8BDC449C1AEF905700D8A0B8 /* IMG_2268.JPG */,
+				8BDC44A21AF0BD6200D8A0B8 /* btnbg.png */,
 				C186975119936C2A00E92774 /* YCLanguageTools.h */,
 				C186975219936C2A00E92774 /* YCLanguageTools.m */,
 				C186971D1993627300E92774 /* AppDelegate.h */,
 				C186971E1993627300E92774 /* AppDelegate.m */,
-				C18697481993698100E92774 /* OpenVC.h */,
-				C18697491993698100E92774 /* OpenVC.m */,
-				C18697201993627300E92774 /* Main.storyboard */,
-				C18697261993627300E92774 /* Images.xcassets */,
-				C18697151993627300E92774 /* Supporting Files */,
 				C1F6AB3119949C9D008AADA4 /* TestVC1.h */,
 				C1F6AB3219949C9D008AADA4 /* TestVC1.m */,
 				C1F6AB3419949CCA008AADA4 /* TestVC2.h */,
 				C1F6AB3519949CCA008AADA4 /* TestVC2.m */,
 				C1F6AB3719949CE2008AADA4 /* TestVC3.h */,
 				C1F6AB3819949CE2008AADA4 /* TestVC3.m */,
+				C18697481993698100E92774 /* OpenVC.h */,
+				C18697491993698100E92774 /* OpenVC.m */,
+				8BDC44A41AF1DA7700D8A0B8 /* CustomTabBarController.h */,
+				8BDC44A51AF1DA7700D8A0B8 /* CustomTabBarController.m */,
+				C18697201993627300E92774 /* Main.storyboard */,
+				C18697261993627300E92774 /* Images.xcassets */,
+				C18697151993627300E92774 /* Supporting Files */,
+				8BDC44A71AF1F3D600D8A0B8 /* TestXIb.h */,
+				8BDC44A81AF1F3D600D8A0B8 /* TestXIb.m */,
+				8BDC44B01AF1F68100D8A0B8 /* TestXIb.xib */,
 			);
 			path = Test_Local_Two;
 			sourceTree = "<group>";
@@ -281,7 +302,10 @@
 				C1CE581C199C5D04005F6A88 /* Localizable.sh in Resources */,
 				C1869745199364B900E92774 /* Localizable.strings in Resources */,
 				C18697191993627300E92774 /* InfoPlist.strings in Resources */,
+				8BDC44A31AF0BD6200D8A0B8 /* btnbg.png in Resources */,
 				C18697221993627300E92774 /* Main.storyboard in Resources */,
+				8BDC449A1AEF905700D8A0B8 /* IMG_2268.JPG in Resources */,
+				8BDC44AE1AF1F68100D8A0B8 /* TestXIb.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +359,8 @@
 				C186971F1993627300E92774 /* AppDelegate.m in Sources */,
 				C186974A1993698100E92774 /* OpenVC.m in Sources */,
 				C1F6AB3619949CCA008AADA4 /* TestVC2.m in Sources */,
+				8BDC44A91AF1F3D600D8A0B8 /* TestXIb.m in Sources */,
+				8BDC44A61AF1DA7700D8A0B8 /* CustomTabBarController.m in Sources */,
 				C186971B1993627300E92774 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +384,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8BDC449C1AEF905700D8A0B8 /* IMG_2268.JPG */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BDC449B1AEF905700D8A0B8 /* Base */,
+			);
+			name = IMG_2268.JPG;
+			sourceTree = "<group>";
+		};
+		8BDC44B01AF1F68100D8A0B8 /* TestXIb.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BDC44AF1AF1F68100D8A0B8 /* Base */,
+				8BDC44B21AF1F68200D8A0B8 /* en */,
+				8BDC44B41AF1F68300D8A0B8 /* zh-Hans */,
+			);
+			name = TestXIb.xib;
+			sourceTree = "<group>";
+		};
 		C18697171993627300E92774 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

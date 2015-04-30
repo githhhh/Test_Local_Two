@@ -8,7 +8,7 @@
 
 #import "OpenVC.h"
 #import "AppDelegate.h"
-//#import "TestXib.h"
+#import "TestXIb.h"
 @interface OpenVC ()
 
 
@@ -31,15 +31,13 @@
     // Do any additional setup after loading the view.
     
     _label.text =  LocatizedStirngForkey(@"content");
+
 }
 
 - (IBAction)xibAction:(id)sender {
     
-//    TestXib *testXib = [[TestXib alloc] initWithNibName:@"TestXib" bundle:[[YCLanguageTools shareInstance] languageBundle]];
-//    //[[YCLanguageTools shareInstance] languageBundle]
-////    [self.navigationController pushViewController:testXib animated:YES];
-//    [self.view addSubview:testXib.view];
-    
+    TestXIb *testXib = [[TestXIb alloc] initWithNibName:@"TestXIb" bundle:[[YCLanguageTools shareInstance] languageBundle]];
+    [self.navigationController pushViewController:testXib animated:YES];
 }
 
 
@@ -52,17 +50,17 @@
         [[YCLanguageTools shareInstance]  saveDefineUserLanguage:@"zh-Hans"] ;
     }
     UIStoryboard *storyBoard = [[YCLanguageTools shareInstance]  locatizedStoryboardWithName:@"Main"];
-    UIViewController *test1 = [storyBoard instantiateViewControllerWithIdentifier:@"test1"];
-    test1.tabBarItem.title = @"test1";
+    UINavigationController *test1 = [storyBoard instantiateViewControllerWithIdentifier:@"test1"];
+    test1.tabBarItem.title = LocatizedStirngForkey(@"TestVC1");
     
-    UIViewController *test2 = [storyBoard instantiateViewControllerWithIdentifier:@"test2"];
-    test2.tabBarItem.title = @"test2";
+    UINavigationController *test2 = [storyBoard instantiateViewControllerWithIdentifier:@"test2"];
+    test2.tabBarItem.title = LocatizedStirngForkey(@"TestVC2");
 
-    UIViewController *test3 = [storyBoard instantiateViewControllerWithIdentifier:@"test3"];
-    test3.tabBarItem.title = @"test3";
+    UINavigationController *test3 = [storyBoard instantiateViewControllerWithIdentifier:@"test3"];
+    test3.tabBarItem.title = LocatizedStirngForkey(@"TestVC3");
 
-    UIViewController *open = [storyBoard instantiateViewControllerWithIdentifier:@"open"];
-    open.tabBarItem.title = @"open";
+    UINavigationController *open = [storyBoard instantiateViewControllerWithIdentifier:@"open"];
+    open.tabBarItem.title = LocatizedStirngForkey(@"Open");
 
     // set them
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];

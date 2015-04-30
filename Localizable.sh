@@ -26,6 +26,14 @@ baseLprojName="Base.lproj"
 # Find storyboard or xib  file full path inside project folder
 for xibOrsbPath in `find ${SRCROOT} -name "*$xibOrsbExt" -print`
 do
+#########################图片国际化##############################
+#搜索指定字符串
+imgName=$(cat $xibOrsbPath|grep -o  '<image name="\w*\.\{0,1\}\w*"'|awk -F'"' '{print$2}')
+#用数组保持
+array=("$imgName")
+#########################图片国际化##############################
+
+
 # Get storyboard or xib file name and folder
 xibOrsbFile=$(basename "$xibOrsbPath")
 
@@ -36,6 +44,8 @@ onappXibOrsbFileName=$xibOrsbFileName$appXibOrsbExt
 
 #xibOrsbDir
 xibOrsbDir=$(dirname "$xibOrsbPath")
+#echo $xibOrsbDir
+#echo $xibOrsbFile
 
 # Get xibOrsbDir upLevel dirName  and dir
 current_XibOrsb_LprojName=$(basename "$xibOrsbDir")
@@ -64,6 +74,36 @@ do
 
 #localeStringsDir
 otherLprojName=$(basename "$localeStringsDir")
+echo $otherLprojName
+localdirNameOnApp=${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/$otherLprojName
+
+#########################图片国际化##############################
+#遍历数组
+filename=${array[n]}
+for var in ${filename[@]};do
+#判断是否包含扩展名如：.JPG .png
+if [[ $var == *.* ]]
+then
+varString=$(echo $var|awk -F '.' '{print $1}')
+else
+varString=$var
+fi
+
+#搜索图片路径 支持pdf png jpg  -name "${varString}.jpg"  -name "${varString}*.png"
+for imgPath in `find $(dirname "$localdirNameOnApp") -type f \( -name "${varString}.pdf" -o -name "${varString}*.png" -o -name "${varString}.JPG" -o -name "${varString}.jpg" \)   -print`
+do
+imgFileName=$(basename "$imgPath")
+imgOnAppPath=$localdirNameOnApp/$imgFileName
+echo  $imgPath
+#判断是否存在
+if [ ! -f "$imgOnAppPath" ];then
+cp  $imgPath  $localdirNameOnApp
+fi
+
+done
+
+done
+#########################图片国际化##############################
 
 # Skip Base.lproj folder
 if [ "$otherLprojName" == "$baseLprojName" ];then
@@ -86,8 +126,6 @@ awk  'NR == FNR && /^\/\*/ {x=$0; getline; a[x]=$0; next} /^\/\*/ {x=$0; print; 
 rm $oldLocaleStringsPath
 fi
 
-
-
 #.string to .storyboard or .xib with ibtool on local.lproj
 ibtool --strings-file $localeStringsPath --write $localeXibOrsbPath $xibOrsbPath
 
@@ -101,10 +139,8 @@ ibtool --errors --warnings --notices --minimum-deployment-target 6.0  --output-f
 rm $localeXibOrsbPath
 
 #cp .storyboardc or .nib to local.lproj on app
-localdirNameOnApp=${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/$otherLprojName
-
-#Judge .lproj exists, because this script runs before the copy resource files.
-#判断.lproj 是否存在 ,因为此脚本运行在 拷贝资源文件之前。
+#Judge .lproj exists.
+#判断.lproj 是否存在 。
 if [ ! -x "$localdirNameOnApp" ]; then
 mkdir "$localdirNameOnApp"
 fi
@@ -115,16 +151,10 @@ rm -rf $appXibOrsbFile
 
 done
 
-
 #remove baseString
 rm $baseStringsPath
 
-#debug
-#if find $xibOrsbPath -prune -newer $ll -print | grep -q .; then
-#echo "==========debug========"
-#fi
 done
-
 }
 
 

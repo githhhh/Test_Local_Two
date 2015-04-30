@@ -10,29 +10,29 @@
 	<string>Test_Local_Two</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>11DC624E-9850-4208-B9DA-C28696DCCB73</key>
+		<key>29DD829C93FF91175E7B76ADBB2A4741EB33F99F</key>
 		<string>https://github.com/githhhh/Test_Local_Two.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Test_Local_Two.xcodeproj/project.xcworkspace</string>
+	<string>Test_Local_Two.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>11DC624E-9850-4208-B9DA-C28696DCCB73</key>
+		<key>29DD829C93FF91175E7B76ADBB2A4741EB33F99F</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/githhhh/Test_Local_Two.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>11DC624E-9850-4208-B9DA-C28696DCCB73</string>
+	<string>29DD829C93FF91175E7B76ADBB2A4741EB33F99F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>11DC624E-9850-4208-B9DA-C28696DCCB73</string>
+			<string>29DD829C93FF91175E7B76ADBB2A4741EB33F99F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Test_Local_Two</string>
 		</dict>

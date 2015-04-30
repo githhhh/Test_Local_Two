@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestXIb">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="BYw-5v-Lsq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2268.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="Z7i-1Z-oyP">
+                    <rect key="frame" x="4" y="79" width="312" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="C5T-PY-05x"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TestXib" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9W-Ff-rOp">
+                    <rect key="frame" x="90" y="50" width="141" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="fX3-4c-UQz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TestXib" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-D2-7eA">
+                    <rect key="frame" x="99" y="293" width="123" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="G6D-uw-PSr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Z7i-1Z-oyP" firstAttribute="centerX" secondItem="bPc-D2-7eA" secondAttribute="centerX" id="2Fo-z7-Fpx"/>
+                <constraint firstItem="M9W-Ff-rOp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="2gZ-qW-Dw1"/>
+                <constraint firstItem="M9W-Ff-rOp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="90" id="Boq-vO-VcZ"/>
+                <constraint firstItem="bPc-D2-7eA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Qeh-mn-33C"/>
+                <constraint firstItem="Z7i-1Z-oyP" firstAttribute="top" secondItem="M9W-Ff-rOp" secondAttribute="bottom" constant="8" symbolic="YES" id="SRr-OO-6Xv"/>
+                <constraint firstItem="M9W-Ff-rOp" firstAttribute="centerX" secondItem="Z7i-1Z-oyP" secondAttribute="centerX" id="e3r-Sy-Q5w"/>
+                <constraint firstItem="bPc-D2-7eA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="99" id="ncC-HC-NwR"/>
+                <constraint firstItem="Z7i-1Z-oyP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="otO-si-shU"/>
+                <constraint firstItem="bPc-D2-7eA" firstAttribute="top" secondItem="Z7i-1Z-oyP" secondAttribute="bottom" constant="14" id="xOe-eH-zwq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="320" y="-140"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="IMG_2268.JPG" width="313" height="244"/>
+    </resources>
+</document>
